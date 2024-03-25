@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+
+    <!--  vanilla-lazyload 17 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital@0;1&display=swap" rel="stylesheet" />
+
+    <!--  line-swiper slide  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--HandleBar-->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <!--  line-awesome 1  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/line-awesome@1/dist/line-awesome/css/line-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <!--  line-awesome 2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vidaloka&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  </head>
+
+  <body class="items-center">
+    <main class="container mx-auto">
+      <section class="">
+        <div class="">
+          <img src="./public/images/uhouse.png" class="w-full h-full" />
+        </div>
+      </section>
+
+      <section class="mt-4 items-center">
+        <div class="relative w-auto xl:h-[650px] lg:h-[500px] h-80 overflow-hidden bg-gray-500">
+          <img
+            src="./public/images/alpha.png"
+            class="absolute justify-center -top-36 flex-shrink-0 w-full xl:h-[1027.333px] lg:h-[900px] h-[750px] bg-gray-500"
+          />
+          <div class="absolute md:top-1/4 top-0 justify-center md:grid md:grid-cols-2 gap-12 md:mx-24">
+            <div class="flex flex-col justify-center items-center">
+              <h1 class="uppercase text-red-600 xl:text-5xl text-3xl font-bold font-Inter lg:w-96 w-72">Uhouse</h1>
+              <p class="lg:text-xl text-sm text-gray-800 font-Inter mt-4 lg:w-96 w-72">
+                Cung cấp giải pháp giải quyết những vấn đề nhức nhối của khách thuê và chủ nhà.
+              </p>
+              <p class="lg:text-xl text-sm text-gray-800 font-Inter lg:w-96 w-72">
+                Với giao diện đơn giản thân thiện dễ sử dụng.
+              </p>
+            </div>
+            <div class="flex flex-col justify-center items-center relative md:mt-0 mt-4">
+              <img src="./public/images/video-map.png" alt="" class="" />
+              <img
+                src="./public/images/Play.svg"
+                class="xl:w-16 w-8 absolute xl:top-28 lg:top-1/2 xl:left-64 lg:left-48"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="mt-4 text-center">
+          <h1 class="uppercase font-Inter font-bold text-2xl text-red-600 border-b-4 border-red-600 inline-block pb-2">
+            tin tức
+          </h1>
+        </div>
+        <div class="mt-4 swiper mySwiper max-w-full xl:h-[500px] lg:h-72">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide group z-1 relative overflow-hidden">
+              <img src="./public/images/swpier1.png" alt="" class="z-1 rounded-xl relative" />
+              <div class="absolute top-2/3 bg-white opacity-80 max-w-full h-24">
+                <p class="font-Inter font-bold text-red-700 mx-8 my-5 text-left xl:text-xl text-xs">
+                  Các xu hướng lựa chọn thiết kế căn hộ lý tưởng năm 2022
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide group z-1 relative">
+              <img src="./public/images/swpier2.png" alt="" class="rounded-xl" />
+              <div class="absolute top-2/3 bg-white opacity-80 max-w-full h-24">
+                <p class="font-Inter font-bold text-red-700 mx-8 my-5 text-left xl:text-xl text-xs">
+                  Những căn hộ đơn giản hiện đại có phải là xu hướng mới?
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide group z-1 relative">
+              <img src="./public/images/swpier3.png" alt="" class="rounded-xl" />
+              <div class="absolute top-2/3 bg-white opacity-80 max-w-full h-24">
+                <p class="font-Inter font-bold text-red-700 mx-8 my-5 text-left xl:text-xl text-xs">
+                  Phong cách thiết kế căn hộ nào sẽ là xu hướng năm 2023?
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide group z-1 relative overflow-hidden">
+              <img src="./public/images/swpier1.png" alt="" class="z-1 rounded-xl relative" />
+              <div class="absolute top-2/3 bg-white opacity-80 max-w-full h-24">
+                <p class="font-Inter font-bold text-red-700 mx-8 my-5 text-left xl:text-xl text-xs">
+                  Các xu hướng lựa chọn thiết kế căn hộ lý tưởng năm 2022
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide group z-1 relative">
+              <img src="./public/images/swpier2.png" alt="" class="rounded-xl" />
+              <div class="absolute top-2/3 bg-white opacity-80 max-w-full h-24">
+                <p class="font-Inter font-bold text-red-700 mx-8 my-5 text-left xl:text-xl text-xs">
+                  Những căn hộ đơn giản hiện đại có phải là xu hướng mới?
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide group z-1 relative">
+              <img src="./public/images/swpier3.png" alt="" class="rounded-xl" />
+              <div class="absolute top-2/3 bg-white opacity-80 max-w-full h-24">
+                <p class="font-Inter font-bold text-red-700 mx-8 my-5 text-left xl:text-xl text-xs">
+                  Phong cách thiết kế căn hộ nào sẽ là xu hướng năm 2023?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+    </main>
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- End Icons -->
+
+    <script type="module" src="src/main.ts"></script>
+  </body>
+</html>
