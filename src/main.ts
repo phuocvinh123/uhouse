@@ -41,3 +41,13 @@ setupFormValid();
 // };
 
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const arrowIcon = document.getElementById('arrow-icon');
+  const dropdownSelect = document.getElementById('dropdown-select');
+
+  arrowIcon?.addEventListener('click', function() {
+    dropdownSelect?.classList.toggle('open');
+  });
+});
+  
