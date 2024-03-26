@@ -41,6 +41,9 @@ setupFormValid();
 // };
 
 
+// Using swpier slice for img
+import { setupSwiper } from './swiper.ts';
+setupSwiper();
 
 document.addEventListener('DOMContentLoaded', function() {
   const arrowIcon = document.getElementById('arrow-icon');

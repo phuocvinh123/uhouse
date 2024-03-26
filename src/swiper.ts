@@ -46,6 +46,10 @@ export const setupSwiper = () => {
         slidesPerView: 1,
       },
     },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    }
   });
 
   new Swiper(".mySwiperContent", {
