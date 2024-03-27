@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   content: ['./*.html'],
   safelist: [
@@ -18,7 +19,8 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      Inter: ['Inter', 'sans-serif'],
+      inter: ['Inter', ...defaultTheme.fontFamily.sans],
+      serif: ['Playfair Display', ...defaultTheme.fontFamily.serif],
     },
     screens: {
       sm: '640px',
