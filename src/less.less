@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper {
+  @apply mx-auto;
+}
+
+.swiper-slide {
+  @apply text-center;
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply cursor-grab;
+}
+
+.swiper-slide img {
+  @apply block;
+  width: 100%;
+  height: 100%;
+  @apply object-cover;
+}
+
 .custom-select {
     appearance: none;
   -webkit-appearance: none;

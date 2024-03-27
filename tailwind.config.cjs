@@ -17,6 +17,9 @@ module.exports = {
     },
   },
   theme: {
+    fontFamily: {
+      Inter: ['Inter', 'sans-serif'],
+    },
     screens: {
       sm: '640px',
       md: '768px',
@@ -336,11 +339,11 @@ module.exports = {
         },
       },
       animation: {
-        'rotation': 'rotation 8s linear infinite;',
-        'rotationScale': 'rotationScale 8s linear infinite;',
-        'turnOver': 'turnOver 8s linear infinite;',
+        rotation: 'rotation 8s linear infinite;',
+        rotationScale: 'rotationScale 8s linear infinite;',
+        turnOver: 'turnOver 8s linear infinite;',
         spinx8: 'spin 8s linear infinite;',
-        'burgerHover2': 'burgerHover2 2s infinite ease-in alternate forwards 800ms',
+        burgerHover2: 'burgerHover2 2s infinite ease-in alternate forwards 800ms',
         shine: 'shine 0.8s',
         'intro-x-animation': 'introXAnimation .4s ease-in-out forwards .33333s',
         'burger-hover-2': 'burgerHover 1s infinite ease-in-out alternate forwards 200ms',
