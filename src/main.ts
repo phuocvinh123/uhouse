@@ -54,3 +54,5 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
   
+import { scrollWindow} from './scroll.ts'
+scrollWindow();
