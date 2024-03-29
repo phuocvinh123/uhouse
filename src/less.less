@@ -14,10 +14,14 @@
   @apply cursor-grab;
 }
 
-.swiper-slide img {
+.swiper-button-disabled {
+  @apply hidden;
+}
+
+.swiper-slide>img {
   @apply block;
-  width: 100%;
-  height: 100%;
+  @apply w-full;
+  @apply h-full;
   @apply object-cover;
 }
 
@@ -25,17 +29,19 @@
   @apply border-2;
   @apply border-blue-400;
 }
-.swiper-slide>.imgae-swiper {
-  width: 90% !important;
-}
+
 .custom-select {
-    appearance: none;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   background: url('path_to_blank_image.png') no-repeat right center;
   padding-right: 20px;
-  border: none; /* Xóa viền */
-  outline: none; /* Xóa đường viền khi focus */
-  width: fit-content; /* Đặt độ rộng dựa trên nội dung */
-  white-space: nowrap; /* Ngăn chặn xuống dòng */
-  }
+  border: none;
+  /* Xóa viền */
+  outline: none;
+  /* Xóa đường viền khi focus */
+  width: fit-content;
+  /* Đặt độ rộng dựa trên nội dung */
+  white-space: nowrap;
+  /* Ngăn chặn xuống dòng */
+}

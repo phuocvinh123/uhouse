@@ -1,11 +1,11 @@
-export function scrollwindowsvg (){
-  
-  document.querySelector('.progress-point')?.addEventListener('click', function() {
-   window.scrollTo({
-     top: 0,
-     behavior: 'smooth' 
-   });
- });
+export function scrollwindowsvg() {
+
+  document.querySelector('.progress-point')?.addEventListener('click', function () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 }
 
 export function scrollWindow() {
@@ -20,8 +20,6 @@ export function scrollWindow() {
     navMenu?.classList.add('opacity-95')
   }
   window.addEventListener('scroll', () => {
-    
-
     if (window.scrollY > 123) {
       navMenu?.classList.add('fixed')
       navMenu?.classList.add('top-0')
