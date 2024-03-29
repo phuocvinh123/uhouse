@@ -42,9 +42,7 @@ setupFormValid();
 
 
 // Using swpier slice for img
-import { setupSwiper,swiperImage } from './swiper.ts';
-setupSwiper();
-swiperImage();
+
 
 document.addEventListener('DOMContentLoaded', function() {
   const arrowIcon = document.getElementById('arrow-icon');
@@ -57,3 +55,5 @@ document.addEventListener('DOMContentLoaded', function() {
   
 import { scrollWindow} from './scroll.ts'
 scrollWindow();
+import { setupSwiper } from './swiper.ts';
+setupSwiper();

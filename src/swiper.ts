@@ -64,23 +64,27 @@ export const setupSwiper = () => {
       slideChangeTransitionStart: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
     },
   });
+
+  var swiper = new Swiper(".swiperContent", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  new Swiper(".swiperContent2", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next-content",
+      prevEl: ".swiper-button-prev-content",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+
+
+  return swiper
 }
 
 
-export const swiperImage = new Swiper('.mySwiperImage', {
-  loop: true,
-  spaceBetween: 30,
-  slidesPerView: 1,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next-custom',
-    prevEl: '.swiper-button-prev-custom',
-  },
-});
