@@ -11,7 +11,6 @@ export function scrollwindowsvg (){
 export function scrollWindow() {
   window.addEventListener('scroll', () => {
   const navMenu = document.querySelector('.header-menu');
-  navMenu?.classList.remove('sticky')
     if (window.scrollY > 123) {
       navMenu?.classList.add('fixed')
       navMenu?.classList.add('top-0')

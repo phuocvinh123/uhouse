@@ -65,3 +65,22 @@ export const setupSwiper = () => {
     },
   });
 }
+
+
+export const swiperImage = new Swiper('.mySwiperImage', {
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 1,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next-custom',
+    prevEl: '.swiper-button-prev-custom',
+  },
+});
