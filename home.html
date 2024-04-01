@@ -41,21 +41,21 @@
 
   <body class="items-center font-inter">
     <!--Header start-->
-    <header class="header-menu sticky z-20">
-      <div class="">
-        <div
-          class="flex justify-between lg:justify-center items-center mx-auto max-w-[1440px] w-full bg-white px-6 xl:px-32 h-20 xl:gap-80 gap-7 lg:gap-28 pt-2 pb-1"
-        >
+    <header class="container bg-white mx-auto w-full">
+      <div
+        class="px-10 w-full bg-white z-20 mx-auto header-menu fixed top-0 right-0 left-0 h-20 gap-10 lg:gap-14 xl:gap-28 pt-2 pb-1 duration-500 transition-all shadow-lg"
+      >
+        <div class="flex justify-between">
           <div class="flex justify-center items-center gap-4">
             <div class="rounded-xl bg-white w-11 h-11 shrink-0">
               <img src="./images/logo1.png" alt="" />
             </div>
-            <h3 class="text-red-600 font-bold text-2xl not-italic uppercase leading-normal">uhouse</h3>
-            <span class="bg-red-600 w-1 h-8"></span>
-            <h3 class="text-red-600 font-bold text-2xl not-italic uppercase leading-normal">connet</h3>
+            <h3 class="text-red-600 font-bold text-base sm:text-2xl not-italic uppercase leading-normal">uhouse</h3>
+            <span class="bg-red-600 w-1 h-5 sm:h-8"></span>
+            <h3 class="text-red-600 font-bold text-base sm:text-2xl not-italic uppercase leading-normal">connet</h3>
           </div>
-          <div class="hidden lg:block w-full">
-            <div class="max-w-2xl w-full h-6 flex flex-row justify-center items-center gap-6">
+          <div class="max-w-2xl w-full px-3 hidden lg:block">
+            <div class="w-full h-6 flex flex-row justify-center items-center gap-6">
               <div class="flex justify-center items-center gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path
@@ -88,7 +88,7 @@
                   height="25"
                   viewBox="0 0 16 16"
                   fill="none"
-                  class="pr-2 pb-2 py-1 absolute"
+                  class="pr-2 pb-2 py-1 absolute right-0 -top-1 cursor-pointer"
                 >
                   <path
                     d="M9.5 1.5C6.74414 1.5 4.5 3.74414 4.5 6.5C4.5 7.69727 4.91992 8.79492 5.625 9.65625L1.64062 13.6406L2.35938 14.3594L6.34375 10.375C7.20508 11.0801 8.30273 11.5 9.5 11.5C12.2559 11.5 14.5 9.25586 14.5 6.5C14.5 3.74414 12.2559 1.5 9.5 1.5ZM9.5 2.5C11.7148 2.5 13.5 4.28516 13.5 6.5C13.5 8.71484 11.7148 10.5 9.5 10.5C7.28516 10.5 5.5 8.71484 5.5 6.5C5.5 4.28516 7.28516 2.5 9.5 2.5Z"
@@ -125,23 +125,22 @@
             <ion-icon name="menu" class="text-4xl z-30" id="menuNav"></ion-icon>
           </div>
         </div>
-        <div class="h-[1px] bg-gray-400"></div>
       </div>
     </header>
     <!--Header end-->
 
-    <main class="mx-auto">
+    <main>
       <section class="">
         <img src="/images/uhouse.png" class="w-full h-full" />
       </section>
 
-      <section class="items-center">
-        <div class="relative w-auto xl:h-[600px] lg:h-[500px] h-80 overflow-hidden bg-slate-700 z-10">
-          <img
-            src="/images/alpha.png"
-            class="absolute justify-center -top-52 flex-shrink-0 w-full xl:h-[1027.333px] lg:h-[900px] h-[750px] opacity-90"
-          />
-          <div class="absolute md:top-1/4 top-0 justify-center md:grid md:grid-cols-2 gap-4 md:mx-24">
+      <section class="items-center relative xl:h-[600px] lg:h-[500px] h-80 overflow-hidden bg-gray-500 z-10">
+        <img
+          src="/images/alpha.png"
+          class="absolute justify-center -top-52 flex-shrink-0 w-full xl:h-[1027.333px] lg:h-[900px] h-[750px] opacity-90"
+        />
+        <div class="container mx-auto xl:mt-28 lg:mt-36 md:mt-14 relative w-auto bg-slate-700">
+          <div class="absolute md:top-1/4 top-0 justify-center md:grid md:grid-cols-2 gap-4 mx-auto">
             <div class="flex flex-col justify-start items-start">
               <h1 class="uppercase text-red-600 xl:text-5xl text-3xl font-bold font-sans">Uhouse</h1>
               <p class="lg:text-xl text-sm text-gray-800 font-sans mt-4 leading-5 font-">
@@ -163,14 +162,14 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
-                class="lg:h-96 w-full md:h-56 h-48"
+                class="xl:h-96 w-full md:h-56 h-48"
               ></iframe>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="">
+      <section class="container mx-auto">
         <div class="mt-4 text-center relative">
           <h1
             class="uppercase font-sans font-bold text-2xl text-red-800 inline-block pb-1 after:border-red-700 after:border-b-2 after:px-7 after:absolute after:bottom-0 after:left-[48%] after:rounded"
@@ -235,7 +234,7 @@
         </div>
       </section>
 
-      <section class="w-[90%] xl:w-[70%] max-w-[1440px] h-full mx-auto">
+      <section class="container mx-auto">
         <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-5 text-black">
           <div class="mt-8 sm:col-span-3 md:col-span-4 w-full *:pb-2">
             <div class="flex flex-wrap border-b-2 border-slate-600 pb-1 pr-2">
@@ -881,29 +880,30 @@
     </main>
 
     <!--Footer start-->
-    <footer class="bg-gray-100 mt-96 sm:mt-6 md:mt-0 px-4">
-      <div class="lg:w-[80%] w-full xl:w-[70%] max-w-[1440px] h-full mx-auto">
+    <footer class="bg-gray-100 sm:mt-6 mt-0">
+      <div class="container w-full mx-auto">
         <div class="grid grid-cols-2 md:grid-cols-4 w-full mx-auto py-5">
           <div>
             <h3 class="font-bold uppercase text-sm text-neutral-700">Công ty dịch vụ Uhouse</h3>
             <div class="grid grid-cols-1 gap-2 pt-4">
               <div>
                 <ion-icon name="location"></ion-icon>
-                <span class="font-bold">Địa Chỉ: </span
-                ><span class="text-neutral-600">Số 7 Cộng Hoà,P.4,Q.Tân Bình</span>
+                <span class="font-bold font-inter">Địa Chỉ: </span
+                ><span class="font-inter text-neutral-600">Số 7 Cộng Hoà,P.4,Q.Tân Bình</span>
               </div>
               <div>
                 <ion-icon name="call"></ion-icon>
-                <span class="font-bold">Điện Thoại: </span><span class="text-neutral-600">0901860555</span>
+                <span class="font-bold font-inter">Điện Thoại: </span
+                ><span class="font-inter text-neutral-600">0901860555</span>
               </div>
               <div>
                 <ion-icon name="mail-outline"></ion-icon>
-                <span class="font-bold">Email:</span>
+                <span class="font-bold font-inter">Email:</span>
               </div>
               <div>
                 <ion-icon name="qr-code-outline"></ion-icon>
-                <span class="font-bold">MST: </span>
-                <span class="text-neutral-600">0317253218</span>
+                <span class="font-bold font-inter">MST: </span>
+                <span class="font-inter text-neutral-600">0317253218</span>
               </div>
 
               <div class="flex justify-start items-center gap-1 w-56 py-3">
@@ -932,10 +932,10 @@
           <div>
             <h3 class="font-bold uppercase text-sm text-neutral-600">Liên kết nhanh</h3>
             <div class="grid grid-cols-1 gap-2 pt-4">
-              <span class="text-gray-500">Giới thiệu chung</span>
-              <span class="text-gray-500">Lĩnh vực kinh doanh</span>
-              <span class="text-gray-500">Tầm nhìn sử mệnh</span>
-              <span class="text-gray-500">Liên hệ</span>
+              <span class="font-inter text-gray-500">Giới thiệu chung</span>
+              <span class="font-inter text-gray-500">Lĩnh vực kinh doanh</span>
+              <span class="font-inter text-gray-500">Tầm nhìn sử mệnh</span>
+              <span class="font-inter text-gray-500">Liên hệ</span>
             </div>
           </div>
           <div>
@@ -945,16 +945,16 @@
                 <input
                   type="text"
                   placeholder="Nhập tên của bạn"
-                  class="pl-2 w-full h-8 font-normal text-sm text-neutral-600 rounded-md border border-gray-400"
+                  class="pl-2 w-full h-8 font-normal font-inter text-sm text-neutral-600 rounded-md border border-gray-400"
                 />
                 <input
                   type="text"
                   placeholder="Nhập email của bạn"
-                  class="font-normal w-full h-8 pl-2 text-sm text-neutral-600 rounded-md border border-gray-400"
+                  class="font-normal w-full h-8 pl-2 font-inter text-sm text-neutral-600 rounded-md border border-gray-400"
                 />
                 <button
                   type="submit"
-                  class="font-bold w-36 h-7 rounded-md uppercase text-sm bg-gradient-to-t from-red-700 via-red-600 to-red-500 items-start text-white"
+                  class="font-bold font-inter w-36 h-7 rounded-md uppercase text-sm bg-gradient-to-t from-red-700 via-red-600 to-red-500 items-start text-white"
                 >
                   gửi thông tin
                 </button>
@@ -964,15 +964,17 @@
         </div>
         <div class="h-[1px] bg-gray-300"></div>
         <div class="justify-start text-center grid grid-cols-1">
-          <span class="text-gray-400 text-xs">UHouse - Always Be With You</span>
-          <span class="text-gray-400 text-xs">Copyright © 2022 UHOUSE - Giải Pháp Bất Động Sản Cho Thuê</span>
-          <span class="text-gray-400 text-xs"
+          <span class="font-inter text-gray-400 text-xs">UHouse - Always Be With You</span>
+          <span class="font-inter text-gray-400 text-xs"
+            >Copyright © 2022 UHOUSE - Giải Pháp Bất Động Sản Cho Thuê</span
+          >
+          <span class="font-inter text-gray-400 text-xs"
             >Phát Triển Bởi Công ty <span class="font-bold text-gray-400">CrossTech</span></span
           >
-          <span class="text-gray-400 text-xs"
+          <span class="font-inter text-gray-400 text-xs"
             >Giấy chứng nhận đăng ký doanh nghiệp số: 0317253218 do Sở kế hoạch và đầu tư TPHCM</span
           >
-          <span class="text-gray-400 text-xs">Cấp lần đầu ngày 20 tháng 10 năm 2022</span>
+          <span class="font-inter text-gray-400 text-xs">Cấp lần đầu ngày 20 tháng 10 năm 2022</span>
         </div>
       </div>
     </footer>
