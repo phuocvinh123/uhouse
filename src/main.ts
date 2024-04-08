@@ -51,9 +51,55 @@ document.addEventListener('DOMContentLoaded', function() {
   arrowIcon?.addEventListener('click', function() {
     dropdownSelect?.classList.toggle('open');
   });
+
+
+const playImage = document.getElementById('play-image');
+const videoIframe = document.getElementById('video-iframe');
+
+if (playImage !== null && videoIframe !== null) {
+  playImage.style.display = 'none';
+
+  videoIframe.addEventListener('click', function() {
+    playImage.style.display = 'block';
+    videoIframe.style.display = 'none';
+    console.log('aaaaaaa');
+  });
+
+  playImage.addEventListener('click', function() {
+    playImage.style.display = 'none';
+    videoIframe.style.display = 'block';
+    console.log('bbbbbb');
+  });
+
+  videoIframe.addEventListener('pause', function() {
+    playImage.style.display = 'block';
+    console.log('Video paused');
+  });
+}
 });
   
 import { scrollWindow} from './scroll.ts'
 scrollWindow();
 import { setupSwiper } from './swiper.ts';
 setupSwiper();
+
+// const videoIframe = document.getElementById('video-iframe');
+// const playImage = document.getElementById('play-image');
+
+// // Ẩn hình ảnh khi ba đầu
+// playImage?.classList.add('hidden') ;
+
+// // Bắt sự kiện khi video dừng
+// videoIframe?.addEventListener('pause', function() {
+//   // Hiển thị hình ảnh
+//   playImage?.classList.add('block') ;
+// });
+
+// // Bắt sự kiện khi người dùng bấm vào hình ảnh
+// playImage?.addEventListener('click', function() {
+//   // Ẩn hình ảnh và tiếp tục phát video
+//   playImage?.classList.add('hidden') ;
+//   // videoIframe?.play();
+// });
+
+

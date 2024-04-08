@@ -10,6 +10,8 @@ export function scrollwindowsvg() {
 
 export function scrollWindow() {
   const navMenu = document.querySelector('.header-menu');
+  const registration = document.querySelector('.registration');
+  console.log(window.screen.availWidth);
 
   if (window.scrollY > 123) {
     navMenu?.classList.add('fixed')
@@ -17,8 +19,14 @@ export function scrollWindow() {
     navMenu?.classList.add('left-0')
     navMenu?.classList.add('right-0')
     navMenu?.classList.add('shadow-lg')
-    navMenu?.classList.add('opacity-95')
+    navMenu?.classList.add('bg-white')
+    if (window.screen.availWidth >= 992) {
+      registration?.classList.add('fixed')
+      registration?.classList.add('top-32')
+    }
+
   }
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 123) {
       navMenu?.classList.add('fixed')
@@ -26,14 +34,26 @@ export function scrollWindow() {
       navMenu?.classList.add('left-0')
       navMenu?.classList.add('right-0')
       navMenu?.classList.add('shadow-lg')
-      navMenu?.classList.add('opacity-95')
+      navMenu?.classList.add('bg-white')
+      if (window.screen.availWidth >= 992) {
+        registration?.classList.add('fixed')
+        registration?.classList.add('top-32')
+      } else {
+        registration?.classList.remove('fixed')
+        registration?.classList.remove('top-32')
+      }
+
     } else {
       navMenu?.classList.remove('fixed')
       navMenu?.classList.remove('top-0')
       navMenu?.classList.remove('left-0')
       navMenu?.classList.remove('right-0')
       navMenu?.classList.remove('shadow-lg')
-      navMenu?.classList.remove('opacity-95')
+      navMenu?.classList.remove('bg-white')
+      registration?.classList.remove('fixed')
+      registration?.classList.remove('top-32')
+
+
     }
   })
 }
