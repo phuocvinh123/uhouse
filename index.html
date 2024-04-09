@@ -34,15 +34,22 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vidaloka&display=swap"
     rel="stylesheet" />
 
+  <!-- light box -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3/dist/css/glightbox.min.css" />
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+
 </head>
 
-<body class="">
+<body>
   <!--Header start-->
-  <header class=" border-b-2">
-    <div class="container bg-white mx-auto w-full">
-      <div
-        class="px-10 w-full mx-auto header-menu left-0 right-0 h-20 gap-10 lg:gap-14 xl:gap-28 pt-2 pb-1 duration-500 transition-all z-30">
+  <header class="border-b-2">
+    <div
+      class=" w-full mx-auto header-menu left-0 right-0 h-20 gap-10 lg:gap-14 xl:gap-28 pt-2 pb-1 duration-500 transition-all z-30">
+      <div class="container bg-white mx-auto w-full px-10">
         <div class="flex justify-between">
           <div class="flex justify-center items-center gap-2">
             <div class="rounded-xl bg-white size-14 shrink-0 justify-center items-center flex pb-3">
@@ -119,16 +126,16 @@
     </div>
   </header>
   <!--Header end-->
-  <main class="container w-full mx-auto">
-    <section>
+  <main class="container w-full mx-auto overflow-hidden">
+    <section class="pb-10">
       <div class="w-full h-full py-2 relative">
         <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-10 h-full relative">
           <div class="col-span-1 lg:col-span-2">
             <div class="swiper swiperContent2 relative overflow-none">
-              <div class="absolute cursor-pointer right-0  z-10 text-black ">
+              <div class="absolute cursor-pointer right-0  z-10 text-black btn-show-image">
                 <ion-icon name="resize-outline" class="  text-2xl e shadow shadow-gray-500"></ion-icon>
               </div>
-              <div class="swiper-wrapper h-[472px] *:px-10">
+              <div class="mySwiper-class swiper-wrapper h-[472px] *:px-10">
                 <div class="swiper-slide">
                   <img src="/images/uhouse1.jpg" />
                 </div>
@@ -161,10 +168,46 @@
                 </div>
               </div>
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/glightbox@3/dist/js/glightbox.min.js"></script>
+
+            <div class="pl-10">
+              <ul class="grid grid-cols-3 gap-3 container mx-auto mt-3">
+                <li class="relative group">
+                  <a href="/images/uhouse1.jpg" class="glightbox w-full h-80 overflow-hidden block">
+                    <span
+                      class="absolute top-0 left-0 bg-white w-full h-full z-10 opacity-0 duration-500 transition-all ease-in-out group-hover:opacity-30"></span>
+                    <img
+                      class="lazy w-[calc(100%+40px)]  h-80 max-w-[calc(100%+40px)] duration-500 transition-all ease-in-out translate-x-[-40px] group-hover:translate-x-0"
+                      src="/images/uhouse1.jpg" alt="image" />
+                  </a>
+                </li>
+                <li class="relative group">
+                  <a href="/images/uhouse2.jpg" class="glightbox w-full h-80 overflow-hidden block">
+                    <span
+                      class="absolute top-0 left-0 bg-black w-full h-full z-10 opacity-0 duration-500 transition-all ease-in-out group-hover:opacity-30"></span>
+                    <img
+                      class="lazy w-[calc(100%+40px)] max-w-[calc(100%+40px)] duration-500 transition-all ease-in-out translate-x-[-40px] group-hover:translate-x-0"
+                      src="/images/uhouse2.jpg" alt="image" />
+                  </a>
+                </li>
+                <li class="relative group">
+                  <a href="/images/uhouse3.jpg" class="glightbox w-full h-80 overflow-hidden block">
+                    <span
+                      class="absolute top-0 left-0 bg-black w-full h-full z-10 opacity-0 duration-500 transition-all ease-in-out group-hover:opacity-30"></span>
+                    <img
+                      class="lazy w-[calc(100%+40px)] max-w-[calc(100%+40px)] duration-500 transition-all ease-in-out translate-x-[-40px] group-hover:translate-x-0"
+                      src="/images/uhouse3.jpg" alt="image" />
+                  </a>
+                </li>
+              </ul>
+              <script>
+                GLightbox({});
+              </script>
+            </div>
           </div>
 
-          <div class=" items-start gap-1 mx-auto lg:mx-0 w-full lg:w-full h-full px-10 lg:px-0">
-            <div class="registration lg:max-w-xs xl:max-w-sm">
+          <div class=" items-start gap-1 mx-auto lg:mx-0 w-full lg:w-full h-full px-10 lg:px-0 z-0">
+            <div class="registration top-32 lg:max-w-xs xl:max-w-sm ">
               <div class="grid grid-cols-3 gap-2">
                 <div class="col-span-2 flex gap-2 h-full">
                   <img src="/images/logo-avatar.png" alt="" class="max-w-14 max-h-14 rounded-full">
@@ -312,7 +355,7 @@
     </section>
   </main>
   <!--Footer start-->
-  <footer class="bg-gray-100 sm:mt-6 mt-0 ">
+  <footer class="bg-gray-100 sm:mt-6 mt-0 z-50">
     <div class="container w-full mx-auto px-10">
       <div class="grid grid-cols-2 md:grid-cols-4 w-full mx-auto py-5">
         <div>
@@ -407,6 +450,7 @@
   <!-- End Icons -->
 
   <script type="module" src="src/main.ts"></script>
+
 </body>
 
 </html>

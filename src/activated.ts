@@ -36,3 +36,15 @@ export const handleChangeHidden = () => {
     backgroundBlack?.add(contentHidden);
   }
 }
+
+export const handleShowImage = () => {
+  const image = document.querySelector('.mySwiper-class')
+  if (image) {
+    if (image.classList.contains('hidden')) {
+      image.classList.remove('hidden');
+    } else {
+      image.classList.add('hidden');
+    }
+  }
+}
+

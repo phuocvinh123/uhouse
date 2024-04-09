@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  --b: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 1px;
+  background: conic-gradient(#0000 10%, #f03355) content-box;
+  -webkit-mask:
+    repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
+    radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: l4 1s infinite steps(10);
+  position: absolute;
+  @apply top-1/2;
+  @apply left-1/2;
+}
+
+@keyframes l4 {
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+
 .swiper {
   @apply mx-auto;
 }
@@ -44,8 +70,8 @@
 
 
 .swiper-pagination {
-  width: auto; 
-  height: 20px; 
+  width: auto;
+  height: 20px;
 }
 
 .swiper-pagination-bullet {
@@ -55,5 +81,5 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: darkred; 
+  background-color: darkred;
 }

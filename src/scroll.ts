@@ -11,8 +11,11 @@ export function scrollwindowsvg() {
 export function scrollWindow() {
   const navMenu = document.querySelector('.header-menu');
   const registration = document.querySelector('.registration');
-  console.log(window.screen.availWidth);
 
+  if (window.screen.availWidth >= 992) {
+    registration?.classList.remove('fixed')
+    registration?.classList.remove('top-32')
+  }
   if (window.scrollY > 123) {
     navMenu?.classList.add('fixed')
     navMenu?.classList.add('top-0')
@@ -24,7 +27,6 @@ export function scrollWindow() {
       registration?.classList.add('fixed')
       registration?.classList.add('top-32')
     }
-
   }
 
   window.addEventListener('scroll', () => {
@@ -38,12 +40,17 @@ export function scrollWindow() {
       if (window.screen.availWidth >= 992) {
         registration?.classList.add('fixed')
         registration?.classList.add('top-32')
-      } else {
+      }
+      else {
         registration?.classList.remove('fixed')
         registration?.classList.remove('top-32')
       }
-
-    } else {
+      if (window.scrollY > 1700) {
+        registration?.classList.remove('fixed')
+        registration?.classList.remove('top-32')
+      }
+    }
+    else {
       navMenu?.classList.remove('fixed')
       navMenu?.classList.remove('top-0')
       navMenu?.classList.remove('left-0')
@@ -52,8 +59,6 @@ export function scrollWindow() {
       navMenu?.classList.remove('bg-white')
       registration?.classList.remove('fixed')
       registration?.classList.remove('top-32')
-
-
     }
   })
 }
