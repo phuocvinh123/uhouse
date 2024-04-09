@@ -11,6 +11,7 @@ export function scrollwindowsvg() {
 export function scrollWindow() {
   const navMenu = document.querySelector('.header-menu');
   const registration = document.querySelector('.registration');
+  console.log(registration);
 
   if (window.screen.availWidth >= 992) {
     registration?.classList.remove('fixed')
