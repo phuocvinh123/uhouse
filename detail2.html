@@ -27,10 +27,6 @@
   <!-- google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vidaloka&display=swap"
-    rel="stylesheet" />
-
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <!-- Icons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -43,19 +39,19 @@
   <!-- End Icons -->
 </head>
 
-<body class="font-inter">
+<body>
   <!--Header start-->
   <header class="border-b-2">
     <div
-      class=" w-full mx-auto header-menu left-0 right-0 h-20 gap-10 lg:gap-14 xl:gap-28 pt-2 pb-1 duration-500 transition-all z-30">
-      <div class="container bg-white mx-auto w-full">
+      class="bg-white w-full mx-auto header-menu left-0 right-0 h-20 gap-10 lg:gap-14 xl:gap-28 pt-2 pb-1 duration-500 transition-all z-30">
+      <div class="container mx-auto w-full">
         <div class="flex justify-between">
           <div class="flex justify-center items-center gap-2">
             <div class="rounded-xl bg-white size-14 shrink-0 justify-center items-center flex pb-3">
               <img src="./images/logo.png" alt="">
             </div>
             <h3 class="text-red-700 font-bold text-base sm:text-2xl not-italic uppercase leading-normal ">uhouse</h3>
-            <span class="bg-red-700 w-[3px] h-5 sm:h-8"></span>
+            <span class="bg-red-700 w-0.5 h-5 sm:h-8"></span>
             <h3 class="text-red-700 font-bold text-base sm:text-2xl not-italic uppercase leading-normal ">connet</h3>
           </div>
           <div class="max-w-2xl w-full px-3 hidden lg:block">
@@ -91,7 +87,7 @@
                 </svg>
               </div>
             </div>
-            <div class="max-w-screen-md w-[98.5%] h-[1px] bg-gray-400 ml-3"></div>
+            <div class="max-w-screen-md h-0.5 bg-gray-400 ml-3"></div>
             <div class="pt-1 flex items-start justify-start text-center gap-1">
               <div
                 class="max-w-40 w-full h-8 bg-amber-500 transform -skew-x-12 flex flex-row justify-center items-center">
@@ -971,22 +967,22 @@
           <div class="grid grid-cols-1 gap-2 pt-4">
             <div>
               <ion-icon name="location"></ion-icon>
-              <span class="font-bold font-inter">Địa Chỉ: </span><span class="font-inter text-neutral-600">Số 7 Cộng
+              <span class="font-bold ">Địa Chỉ: </span><span class="text-neutral-600">Số 7 Cộng
                 Hoà,P.4,Q.Tân Bình</span>
             </div>
             <div>
               <ion-icon name="call"></ion-icon>
-              <span class="font-bold font-inter">Điện Thoại: </span><span
-                class="font-inter text-neutral-600">0901860555</span>
+              <span class="font-bold">Điện Thoại: </span><span
+                class="text-neutral-600">0901860555</span>
             </div>
             <div>
               <ion-icon name="mail-outline"></ion-icon>
-              <span class="font-bold font-inter">Email:</span>
+              <span class="font-bold ">Email:</span>
             </div>
             <div>
               <ion-icon name="qr-code-outline"></ion-icon>
-              <span class="font-bold font-inter">MST: </span>
-              <span class="font-inter text-neutral-600">0317253218</span>
+              <span class="font-bold ">MST: </span>
+              <span class=" text-neutral-600">0317253218</span>
             </div>
 
             <div class="flex justify-start items-center gap-1 w-56 py-3">
@@ -1015,10 +1011,10 @@
         <div>
           <h3 class="font-bold uppercase text-sm text-neutral-600">Liên kết nhanh</h3>
           <div class="grid grid-cols-1 gap-2 pt-4">
-            <span class="font-inter text-gray-500">Giới thiệu chung</span>
-            <span class="font-inter text-gray-500">Lĩnh vực kinh doanh</span>
-            <span class="font-inter text-gray-500">Tầm nhìn sử mệnh</span>
-            <span class="font-inter text-gray-500">Liên hệ</span>
+            <span class="text-gray-500">Giới thiệu chung</span>
+            <span class="text-gray-500">Lĩnh vực kinh doanh</span>
+            <span class="text-gray-500">Tầm nhìn sử mệnh</span>
+            <span class="text-gray-500">Liên hệ</span>
           </div>
         </div>
         <div>
@@ -1026,26 +1022,26 @@
           <div class="pt-4">
             <form action="" class="grid grid-cols-1 gap-2 items-start">
               <input type="text" placeholder="Nhập tên của bạn"
-                class="pl-2 w-full h-8 font-normal font-inter text-sm text-neutral-600 rounded-md border border-gray-400" />
+                class="pl-2 w-full h-8 font-normal text-sm text-neutral-600 rounded-md border border-gray-400" />
               <input type="text" placeholder="Nhập email của bạn"
-                class="font-normal w-full h-8 pl-2 font-inter text-sm text-neutral-600 rounded-md border border-gray-400" />
+                class="font-normal w-full h-8 pl-2 text-sm text-neutral-600 rounded-md border border-gray-400" />
               <button type="submit"
-                class="font-bold font-inter w-36 h-7 rounded-md uppercase text-sm bg-gradient-to-t from-red-700 via-red-600 to-red-500 items-start text-white">
+                class="font-bold w-36 h-7 rounded-md uppercase text-sm bg-gradient-to-t from-red-700 via-red-600 to-red-500 items-start text-white">
                 gửi thông tin
               </button>
             </form>
           </div>
         </div>
       </div>
-      <div class="h-[1px] bg-gray-300"></div>
+      <div class="h-0.5 bg-gray-300"></div>
       <div class="justify-start text-center grid grid-cols-1">
-        <span class="font-inter text-gray-400 text-xs">UHouse - Always Be With You</span>
-        <span class="font-inter text-gray-400 text-xs">Copyright © 2022 UHOUSE - Giải Pháp Bất Động Sản Cho Thuê</span>
-        <span class="font-inter text-gray-400 text-xs">Phát Triển Bởi Công ty <span
+        <span class="text-gray-400 text-xs">UHouse - Always Be With You</span>
+        <span class="text-gray-400 text-xs">Copyright © 2022 UHOUSE - Giải Pháp Bất Động Sản Cho Thuê</span>
+        <span class="text-gray-400 text-xs">Phát Triển Bởi Công ty <span
             class="font-bold text-gray-400">CrossTech</span></span>
-        <span class="font-inter text-gray-400 text-xs">Giấy chứng nhận đăng ký doanh nghiệp số: 0317253218 do Sở kế
+        <span class="text-gray-400 text-xs">Giấy chứng nhận đăng ký doanh nghiệp số: 0317253218 do Sở kế
           hoạch và đầu tư TPHCM</span>
-        <span class="font-inter text-gray-400 text-xs">Cấp lần đầu ngày 20 tháng 10 năm 2022</span>
+        <span class="text-gray-400 text-xs">Cấp lần đầu ngày 20 tháng 10 năm 2022</span>
       </div>
     </div>
   </footer>

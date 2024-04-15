@@ -81,4 +81,8 @@ setupSwiper();
 //   // videoIframe?.play();
 // });
 
+import { renderSwpier, renderHomeSectionLeft, renderHomeSectionRight } from './handleBar.ts';
+renderSwpier();
+renderHomeSectionLeft();
+renderHomeSectionRight();
 

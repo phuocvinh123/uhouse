@@ -20,7 +20,6 @@ module.exports = {
   theme: {
     fontFamily: {
       inter: ['Inter', ...defaultTheme.fontFamily.sans],
-      serif: ['Playfair Display', ...defaultTheme.fontFamily.serif],
     },
     screens: {
       sm: '640px',
