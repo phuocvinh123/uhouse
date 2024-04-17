@@ -49,7 +49,7 @@ export function handleBar() {
   }
 }
 
-export function renderSwpier() {
+export function renderSwiper() {
   interface MenuItem {
     imageSrc: string;
     title: string;
@@ -100,10 +100,16 @@ export function renderSwpier() {
     </div>
   {{/each}}
 `;
+if(typeof Handlebars !== 'undefined'){
+  const compiledTemplate = Handlebars.compile(template);
+  const html = compiledTemplate({items:data.items});
+  const htmlEle = document.getElementById('swpier-container');
+  if(htmlEle){ 
+    htmlEle!.innerHTML = html
+  };
+}
 
-const compiledTemplate = Handlebars.compile(template);
-const html = compiledTemplate({items:data.items});
-document.getElementById('swpier-container')!.innerHTML = html;
+
 }
 
 export function renderHomeSectionLeft() {
@@ -319,9 +325,16 @@ export function renderHomeSectionLeft() {
   </div>
 {{/each}}`;
 
-const compiledTemplate = Handlebars.compile(template);
-const html = compiledTemplate({items:data.items});
-document.getElementById('room-container')!.innerHTML = html;
+if(typeof Handlebars !== 'undefined'){
+  const compiledTemplate = Handlebars.compile(template);
+  const html = compiledTemplate({items:data.items});
+  const htmlEle = document.getElementById('room-container');
+  if(htmlEle){ 
+    htmlEle!.innerHTML = html
+  };
+}
+
+
 }
 
 export function renderHomeSectionRight() {
@@ -367,8 +380,15 @@ export function renderHomeSectionRight() {
     </div>
   </div>
 {{/each}}`;
-
+if(typeof Handlebars !== 'undefined'){
   const compiledTemplate=Handlebars.compile(template);
   const html = compiledTemplate({items:data.items});
-  document.getElementById("right-container")!.innerHTML = html;
+  const htmlEle = document.getElementById('right-container');
+  console.log(htmlEle?htmlEle:false);
+  
+  if(htmlEle){ 
+    htmlEle!.innerHTML = html
+  };
+}
+
 }

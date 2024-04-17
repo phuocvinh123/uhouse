@@ -5,19 +5,10 @@ export const setupSwiper = () => {
     loop: true,
     autoHeight: true,
     spaceBetween: 30,
-    // pagination: {
-    //   el: '.swiper-pagination',
-    //   type: 'bullets',
-    //   clickable: true
-    // },    
     autoplay: {
       delay: 5000,
     },
   }
-  // new Swiper(".mySwiper", {
-  //   ...defaultSetting,
-  //   slidesPerView: 3,
-  // });
 
   new Swiper(".mySwiper", {
     ...defaultSetting,

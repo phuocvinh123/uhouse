@@ -1,10 +1,5 @@
 import './less.less'
 
-import { renderSwpier, renderHomeSectionLeft, renderHomeSectionRight } from './handleBar.ts';
-renderSwpier();
-renderHomeSectionLeft();
-renderHomeSectionRight();
-
 // sweetalert2 11
 import { Message } from './message.ts'
 import { API } from './api.ts'
@@ -60,31 +55,13 @@ document.addEventListener('DOMContentLoaded', function () {
 import { handleShowImage } from './activated.ts'
 const btnButton = document.querySelector('.btn-show-image');
 btnButton?.addEventListener('click', handleShowImage);
-
+import { renderSwiper, renderHomeSectionLeft, renderHomeSectionRight } from './handleBar.ts';
+renderSwiper();
+renderHomeSectionLeft();
+renderHomeSectionRight();
 
 import { scrollWindow } from './scroll.ts'
 scrollWindow();
 import { setupSwiper } from './swiper.ts';
 setupSwiper();
-
-// const videoIframe = document.getElementById('video-iframe');
-// const playImage = document.getElementById('play-image');
-
-// // Ẩn hình ảnh khi ba đầu
-// playImage?.classList.add('hidden') ;
-
-// // Bắt sự kiện khi video dừng
-// videoIframe?.addEventListener('pause', function() {
-//   // Hiển thị hình ảnh
-//   playImage?.classList.add('block') ;
-// });
-
-// // Bắt sự kiện khi người dùng bấm vào hình ảnh
-// playImage?.addEventListener('click', function() {
-//   // Ẩn hình ảnh và tiếp tục phát video
-//   playImage?.classList.add('hidden') ;
-//   // videoIframe?.play();
-// });
-
-
 
