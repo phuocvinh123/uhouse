@@ -8,15 +8,21 @@
   <!--  line-swiper slide  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <!--  line-awesome 1  -->
-  <link href="https://cdn.jsdelivr.net/npm/line-awesome@1/dist/line-awesome/css/line-awesome.min.css"
-    rel="stylesheet" />
+   <!--  vanilla-lazyload 17 -->
+   <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17/dist/lazyload.min.js"></script>
+   <script>
+     setTimeout(() => {
+       new LazyLoad({ callback_error: (el) => (el.src = 'https://via.placeholder.com/1x1/?text=') });
+     }, 1000);
+   </script>
+
   <!-- google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
   <!-- light box -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3/dist/css/glightbox.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 </head>
 
 <body>
@@ -28,7 +34,7 @@
         <div class="flex justify-between">
           <div class="flex justify-center items-center gap-2">
             <div class="rounded-xl bg-white size-14 shrink-0 justify-center items-center flex pb-3">
-              <img src="./images/logo.png" alt="">
+              <img data-src="./images/logo.png" alt="" class="lazy">
             </div>
             <h3 class="text-red-700 font-bold text-base sm:text-2xl not-italic uppercase leading-normal ">uhouse</h3>
             <span class="bg-red-700 w-0.5 h-5 sm:h-8"></span>
@@ -118,7 +124,7 @@
                       class="absolute top-0 left-0 bg-black z-10 opacity-0 duration-500 transition-all ease-in-out group-hover:opacity-30"></span>
                     <img
                       class="lazy w-[calc(100%+40px)] max-w-[calc(100%+40px)] duration-500 transition-all ease-in-out translate-x-[-40px] group-hover:translate-x-0"
-                      src="/images/uhouse1.jpg" alt="image" />
+                      data-src="/images/uhouse1.jpg" alt="image" />
                   </a>
                 </div>
                 <div class="swiper-slide">
@@ -127,7 +133,7 @@
                       class="absolute top-0 left-0 bg-black z-10 opacity-0 duration-500 transition-all ease-in-out group-hover:opacity-30"></span>
                     <img
                       class="lazy w-[calc(100%+40px)] max-w-[calc(100%+40px)] duration-500 transition-all ease-in-out translate-x-[-40px] group-hover:translate-x-0"
-                      src="/images/uhouse2.jpg" alt="image" />
+                      data-src="/images/uhouse2.jpg" alt="image" />
                   </a>
                 </div>
                 <div class="swiper-slide">
@@ -136,7 +142,7 @@
                       class="absolute top-0 left-0 bg-black z-10 opacity-0 duration-500 transition-all ease-in-out group-hover:opacity-30"></span>
                     <img
                       class="lazy w-[calc(100%+40px)] max-w-[calc(100%+40px)] duration-500 transition-all ease-in-out translate-x-[-40px] group-hover:translate-x-0"
-                      src="/images/uhouse3.jpg" alt="image" />
+                      data-src="/images/uhouse3.jpg" alt="image" />
                   </a>
                 </div>
               </div>
@@ -151,13 +157,13 @@
               <div thumbsSlider="" class="swiper swiperContent my-1">
                 <div class="swiper-wrapper *:max-w-20 *:h-20 justify-center">
                   <div class="swiper-slide">
-                    <img src="/images/uhouse1.jpg" class="w-full h-full" />
+                    <img data-src="/images/uhouse1.jpg" class="w-full h-full lazy" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="/images/uhouse2.jpg" class="w-full h-full" />
+                    <img data-src="/images/uhouse2.jpg" class="w-full h-full lazy" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="/images/uhouse3.jpg" class="w-full h-full" />
+                    <img data-src="/images/uhouse3.jpg" class="w-full h-full lazy" />
                   </div>
                 </div>
               </div>
@@ -171,7 +177,7 @@
             <div class="registration top-32 lg:max-w-xs xl:max-w-sm fixed">
               <div class="grid grid-cols-3 gap-2">
                 <div class="col-span-2 flex gap-2 h-full">
-                  <img src="/images/logo-avatar.png" alt="" class="max-w-14 max-h-14 rounded-full">
+                  <img data-src="/images/logo-avatar.png" alt="" class="lazy max-w-14 max-h-14 rounded-full">
                   <div>
                     <h4 class="font-bold text-gray-500  text-sm uppercase">ruby</h4>
                     <span class="text-xs max-w-52 w-full italic">
@@ -307,8 +313,8 @@
           <div class=" w-full h-80 ">
             <label class=" text-neutral-700 text-lg font-bold ">Vị trí</label>
             <div class=" w-full h-full relative ">
-              <img src="/images/location.svg" alt="" class="absolute right-1/2 top-2">
-              <img class=" w-full h-full" src="/images/map.png" />
+              <img data-src="/images/location.svg" alt="" class="lazy absolute right-1/2 top-2">
+              <img class="lazy w-full h-full" data-src="/images/map.png" />
             </div>
           </div>
         </div>
@@ -361,8 +367,8 @@
         <div class="mx-auto">
           <h3 class="font-bold uppercase text-sm text-neutral-600">Tải App</h3>
           <div class="grid grid-cols-1 gap-2 pt-4">
-            <img src="/images/app-store.jpg" alt="" class="w-24 h-7" />
-            <img src="/images/google-play.jpg" alt="" class="w-24 h-7" />
+            <img data-src="/images/app-store.jpg" alt="" class="w-24 h-7 lazy" />
+            <img data-src="/images/google-play.jpg" alt="" class="w-24 h-7 lazy" />
           </div>
         </div>
         <div>

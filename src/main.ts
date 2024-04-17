@@ -1,5 +1,10 @@
 import './less.less'
 
+import { renderSwpier, renderHomeSectionLeft, renderHomeSectionRight } from './handleBar.ts';
+renderSwpier();
+renderHomeSectionLeft();
+renderHomeSectionRight();
+
 // sweetalert2 11
 import { Message } from './message.ts'
 import { API } from './api.ts'
@@ -81,8 +86,5 @@ setupSwiper();
 //   // videoIframe?.play();
 // });
 
-import { renderSwpier, renderHomeSectionLeft, renderHomeSectionRight } from './handleBar.ts';
-renderSwpier();
-renderHomeSectionLeft();
-renderHomeSectionRight();
+
 
