@@ -8,13 +8,13 @@
   <!--  line-swiper slide  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-   <!--  vanilla-lazyload 17 -->
-   <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17/dist/lazyload.min.js"></script>
-   <script>
-     setTimeout(() => {
-       new LazyLoad({ callback_error: (el) => (el.src = 'https://via.placeholder.com/1x1/?text=') });
-     }, 1000);
-   </script>
+  <!--  vanilla-lazyload 17 -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17/dist/lazyload.min.js"></script>
+  <script>
+    setTimeout(() => {
+      new LazyLoad({ callback_error: (el) => (el.src = 'https://via.placeholder.com/1x1/?text=') });
+    }, 1000);
+  </script>
 
   <!-- google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +30,7 @@
   <header class="border-b-2">
     <div
       class="bg-white w-full mx-auto header-menu left-0 right-0 h-20 gap-10 lg:gap-14 xl:gap-28 pt-2 pb-1 duration-500 transition-all z-30">
-      <div class="container mx-auto w-full">
+      <div class="container mx-auto w-full px-10">
         <div class="flex justify-between">
           <div class="flex justify-center items-center gap-2">
             <div class="rounded-xl bg-white size-14 shrink-0 justify-center items-center flex pb-3">
@@ -174,7 +174,7 @@
           </div>
 
           <div class=" items-start gap-1 mx-auto lg:mx-0 w-full lg:w-full h-full px-10 lg:px-0 z-0">
-            <div class="registration top-32 lg:max-w-xs xl:max-w-sm fixed">
+            <div class="registration fixed top-32  lg:max-w-xs xl:max-w-sm ">
               <div class="grid grid-cols-3 gap-2">
                 <div class="col-span-2 flex gap-2 h-full">
                   <img data-src="/images/logo-avatar.png" alt="" class="lazy max-w-14 max-h-14 rounded-full">
@@ -322,8 +322,8 @@
     </section>
   </main>
   <!--Footer start-->
-  <footer class="bg-gray-100 sm:mt-6 mt-0">
-    <div class="container w-full mx-auto">
+  <footer class="bg-gray-100">
+    <div class="container w-full mx-auto  px-10">
       <div class="grid grid-cols-2 md:grid-cols-4 w-full mx-auto py-5">
         <div>
           <h3 class="font-bold uppercase text-sm text-neutral-700">Công ty dịch vụ Uhouse</h3>
@@ -335,8 +335,7 @@
             </div>
             <div>
               <ion-icon name="call"></ion-icon>
-              <span class="font-bold">Điện Thoại: </span><span
-                class="text-neutral-600">0901860555</span>
+              <span class="font-bold">Điện Thoại: </span><span class="text-neutral-600">0901860555</span>
             </div>
             <div>
               <ion-icon name="mail-outline"></ion-icon>

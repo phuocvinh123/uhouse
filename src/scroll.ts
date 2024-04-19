@@ -7,62 +7,58 @@ export function scrollwindowsvg() {
     });
   });
 }
-
 export function scrollWindow() {
   const navMenu = document.querySelector('.header-menu');
   const registration = document.querySelector('.registration');
-  console.log(registration);
 
-  if (window.screen.availWidth >= 992) {
-    registration?.classList.remove('fixed')
-    registration?.classList.remove('top-32')
-  }
-  if (window.scrollY > 123) {
-    navMenu?.classList.add('fixed')
-    navMenu?.classList.add('top-0')
-    navMenu?.classList.add('left-0')
-    navMenu?.classList.add('right-0')
-    navMenu?.classList.add('shadow-lg')
-    navMenu?.classList.add('bg-white')
+  const addClasses = () => {
+    navMenu?.classList.add('fixed', 'top-0', 'left-0', 'right-0', 'shadow-lg', 'bg-white');
+
     if (window.screen.availWidth >= 992) {
-      registration?.classList.add('fixed')
-      registration?.classList.add('top-32')
+      if (window.innerWidth > 1024) {
+        registration?.classList.add('fixed', 'top-32');
+      }
     }
-  }
+  };
+
+  const removeClassesNav = () => {
+    navMenu?.classList.remove('fixed', 'top-0', 'left-0', 'right-0', 'shadow-lg', 'bg-white');
+  };
+  const removeClassesRe = () => {
+    registration?.classList.remove('fixed', 'top-32');
+  };
+
+  // if (window.screen.availWidth >= 992) {
+  //   removeClassesNav();
+  // }
+
+  // if (window.scrollY > 123) {
+  //   addClasses();
+  // }
 
   window.addEventListener('scroll', () => {
+    const maxScrollY = document.documentElement.scrollHeight - window.innerHeight;
+    const hidePoint = maxScrollY * 11/ 12;
+
     if (window.scrollY > 123) {
-      navMenu?.classList.add('fixed')
-      navMenu?.classList.add('top-0')
-      navMenu?.classList.add('left-0')
-      navMenu?.classList.add('right-0')
-      navMenu?.classList.add('shadow-lg')
-      navMenu?.classList.add('bg-white')
-      if (window.screen.availWidth >= 992) {
-        registration?.classList.add('fixed')
-        registration?.classList.add('top-32')
+      addClasses();
+      if (window.screen.availWidth >= 992 && window.innerWidth > 1024) {
+        registration?.classList.add('fixed', 'top-32');
+      } else {
+        removeClassesNav();
       }
-      else {
-        registration?.classList.remove('fixed')
-        registration?.classList.remove('top-32')
+      if (window.scrollY > hidePoint) {
+        removeClassesRe();
       }
-      if (window.scrollY > 1700) {
-        registration?.classList.remove('fixed')
-        registration?.classList.remove('top-32')
-      }
+    } else {
+      removeClassesNav();
+      removeClassesRe();
+
     }
-    else {
-      navMenu?.classList.remove('fixed')
-      navMenu?.classList.remove('top-0')
-      navMenu?.classList.remove('left-0')
-      navMenu?.classList.remove('right-0')
-      navMenu?.classList.remove('shadow-lg')
-      navMenu?.classList.remove('bg-white')
-      registration?.classList.remove('fixed')
-      registration?.classList.remove('top-32')
-    }
-  })
+  });
 }
+
+
 export function breakPointProgress() {
   window.addEventListener('scroll', () => {
     const progressPoint = document.querySelector('.progress-point');

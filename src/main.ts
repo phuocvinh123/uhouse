@@ -1,23 +1,11 @@
 import './less.less'
 
-// sweetalert2 11
-import { Message } from './message.ts'
-import { API } from './api.ts'
-(<any>window).API = API;
-(<any>window).Message = Message;
-
-import { setupFormValid } from './validation.ts'
-setupFormValid();
-(<any>window).SetupFormValid = setupFormValid;
-(<any>window)._MESSAGE_ = {
-  required: 'Xin vui lòng nhập nội dung',
-  email: 'Xin vui lòng nhập địa chỉ email hợp lệ!',
-  minLengthCheckBox: 'Xin vui lòng chọn ít nhất ',
-  minLength: 'Xin vui lòng nhập tối thiểu ',
-  maxLength: 'Xin vui lòng nhập không quá ',
-  compare: 'Xin vui lòng nhập không quá ',
-};
-
+import { renderSwiper, renderHomeSectionLeft, renderHomeSectionRight,renderHomeSectiondetail2,renderImagedetail2 } from './handleBar.ts';
+renderSwiper();
+renderHomeSectionLeft();
+renderHomeSectionRight();
+// renderHomeSectiondetail2();
+// renderImagedetail2();
 
 document.addEventListener('DOMContentLoaded', function () {
   const arrowIcon = document.getElementById('arrow-icon');
@@ -55,10 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
 import { handleShowImage } from './activated.ts'
 const btnButton = document.querySelector('.btn-show-image');
 btnButton?.addEventListener('click', handleShowImage);
-import { renderSwiper, renderHomeSectionLeft, renderHomeSectionRight } from './handleBar.ts';
-renderSwiper();
-renderHomeSectionLeft();
-renderHomeSectionRight();
 
 import { scrollWindow } from './scroll.ts'
 scrollWindow();

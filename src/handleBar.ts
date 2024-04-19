@@ -214,3 +214,128 @@ export function renderHomeSectionRight() {
     }
   }
 }
+
+export function renderHomeSectiondetail2() {
+  interface MenuItem {
+    imageSrc: string;
+    title: string;
+    area: string;
+    type: string;
+    address: string;
+    price: string;
+
+  }
+
+  interface MenuData {
+    items: MenuItem[];
+  }
+
+  const datas: MenuData = {
+    items: [
+      {
+        imageSrc: "/images/pexels-vecislavas-popa-1571469 2.png",
+        title: "An Khánh",
+        area: "27 m2",
+        type: "Loại: Motel",
+        address: "261/37/1D Chu Văn An, phường 12, Quận Bình Thạnh, TP.HCM",
+        price: "3.5"
+      },
+      {
+        imageSrc: "/images/pexels-vecislavas-popa-1571469 2.png",
+        title: "An Khánh",
+        area: "27 m2",
+        type: "Loại: Motel",
+        address: "261/37/1D Chu Văn An, phường 12, Quận Bình Thạnh, TP.HCM",
+        price: "3.5"
+      },
+      {
+        imageSrc: "/images/pexels-vecislavas-popa-1571469 2.png",
+        title: "An Khánh",
+        area: "27 m2",
+        type: "Loại: Motel",
+        address: "261/37/1D Chu Văn An, phường 12, Quận Bình Thạnh, TP.HCM",
+        price: "3.5"
+      },
+      {
+        imageSrc: "/images/pexels-vecislavas-popa-1571469 2.png",
+        title: "An Khánh",
+        area: "27 m2",
+        type: "Loại: Motel",
+        address: "261/37/1D Chu Văn An, phường 12, Quận Bình Thạnh, TP.HCM",
+        price: "3.5"
+      },
+      {
+        imageSrc: "/images/pexels-vecislavas-popa-1571469 2.png",
+        title: "An Khánh",
+        area: "27 m2",
+        type: "Loại: Motel",
+        address: "261/37/1D Chu Văn An, phường 12, Quận Bình Thạnh, TP.HCM",
+        price: "3.5"
+      }
+    ]
+  };
+
+
+  if (typeof Handlebars !== 'undefined') {
+    const temp = document.getElementById('room-container-detail2');
+    if (temp) {
+      const template = Handlebars.compile(temp.innerHTML);
+      const data = { 'items': datas.items }
+      console.log(data);
+
+      document.getElementById('room-container-detail2')!.innerHTML = template(data);
+
+    }
+  }
+}
+
+export function renderImagedetail2() {
+  interface MenuItem {
+    imageSrc: string;
+    introduce: string;
+    date: string;
+
+  }
+
+  interface MenuData {
+    items: MenuItem[];
+  }
+
+  const datas: MenuData = {
+    items: [
+      {
+        imageSrc: "/images/logo-avatar.png",
+        introduce: "Lorem ipsum dolor sit amet",
+        date: "25/07/2022",
+      },
+      {
+        imageSrc: "/images/logo-avatar.png",
+        introduce: "Lorem ipsum dolor sit amet",
+        date: "25/07/2022",
+      },
+      {
+        imageSrc: "/images/logo-avatar.png",
+        introduce: "Lorem ipsum dolor sit amet",
+        date: "25/07/2022",
+      },
+      {
+        imageSrc: "/images/logo-avatar.png",
+        introduce: "Lorem ipsum dolor sit amet",
+        date: "25/07/2022",
+      }
+    ]
+  };
+
+
+  if (typeof Handlebars !== 'undefined') {
+    const temp = document.getElementById('image-detail2');
+    if (temp) {
+      const template = Handlebars.compile(temp.innerHTML);
+const data = { 'items': datas.items }
+      console.log(data);
+
+      document.getElementById('image-detail2')!.innerHTML = template(data);
+
+    }
+  }
+}
